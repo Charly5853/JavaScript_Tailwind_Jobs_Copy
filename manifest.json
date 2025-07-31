@@ -12,10 +12,17 @@
     "background": {
         "service_worker": "background.js"
     },
-    "permissions": ["activeTab", "tabs"],
-    "host_permissions": ["https://generativelanguage.googleapis.com/"],
-    "content_security_policy": {
-        "extension_pages": "script-src 'self'; object-src 'self';"
-    }
-
+    "permissions": ["activeTab", "tabs", "storage"],
+    "host_permissions": [
+        "https://generativelanguage.googleapis.com/"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "*://*.seek.com.au/*",
+            "*://*.indeed.com/*",
+            "*://*.linkedin.com/*"
+        ],
+        "js": ["autofill.js"],
+        "run_at": "document_idle"
+    }]
 }
