@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome Document XML Gemini AI Assistant",
+    "version": "1.0",
+    "description": "A Chrome extension to upload XML files and send queries to Gemini AI, including profile extraction.",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "128": "icon128.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["activeTab", "tabs"],
+    "host_permissions": ["https://generativelanguage.googleapis.com/"],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    }
+
+}

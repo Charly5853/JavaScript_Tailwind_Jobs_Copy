@@ -1,0 +1,11 @@
+{
+    "name": "JavaScript_Tailwind_Jobs",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build:css": "tailwindcss -i ./src/input.css -o ./styles.css --minify"
+    },
+    "devDependencies": {
+        "tailwindcss": "^4.1.11"
+    }
+}
